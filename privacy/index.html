@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Advocate privacy policy</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<h1 id="advocate-privacy-policy">Advocate privacy policy</h1>
+<p>Effective 13 October 2026. Published by C60 LLC, the developer of
+Advocate. Contact: max@c60spaceship.com.</p>
+<p>This policy is published at
+https://maxfreedompollard.github.io/advocate-app/privacy/ and inside the
+app under Settings.</p>
+<h2 id="the-short-version">The short version</h2>
+<p>Advocate listens through your microphone and streams that audio to
+the AI provider you choose, using your own API key. The app has no
+server of its own. Nothing you hear or say is sent to us. We do not run
+analytics, advertising or tracking in the app.</p>
+<h2 id="what-the-app-processes">What the app processes</h2>
+<p>Microphone audio. While a session is running, Advocate captures audio
+from your phone or headset microphone and streams it in real time to the
+AI provider you selected in Settings (for example xAI, OpenAI, Google,
+or a custom server you configured). The audio is not stored by Advocate.
+The provider processes it under the provider's own terms and privacy
+policy, which you accept when you create your account with them.</p>
+<p>Speech recognition for text models. If you choose a text model
+instead of a realtime voice provider, Advocate does not send audio to
+that provider. Your device's speech recognition service turns what the
+microphone hears into text, and only that text goes to the text model.
+Advocate asks for recognition on the device; where the device cannot do
+that, the recognition service (for example Google's speech services) may
+process the audio on its own servers under its own privacy policy.</p>
+<p>Text produced during a session. The provider returns text and, in
+some modes, speech. Advocate shows that text on screen and in the
+lock-screen notification while the session runs. Transcripts are kept in
+memory only, unless you turn on "Save transcripts on this device", in
+which case they are written to the app's private storage on your phone
+and can be exported or deleted from Settings.</p>
+<p>Your brief and settings. The instructions you type (your brief), the
+verbosity level, translation settings and other preferences are stored
+on your device. Your brief is sent to the provider as part of the
+instructions for each session.</p>
+<p>API keys. Keys you enter are encrypted with a key held in the Android
+Keystore and stored in the app's private storage. They are sent only to
+the provider they belong to, over HTTPS or secure WebSocket, unless you
+connect to a server on your own device or network with an unencrypted
+address as described below. They are never logged and never leave your
+device for any other destination.</p>
+<p>Unencrypted local servers. Connections to providers are encrypted. If
+you turn on "Allow unencrypted local servers" (off by default), Advocate
+will also use plain http or ws addresses, but only for this device or a
+private network address such as a model server on your computer.
+Everything sent to such a server, including any key you set for it,
+travels over your network without encryption.</p>
+<h2 id="what-the-app-does-not-do">What the app does not do</h2>
+<ul>
+<li>No account with us, no sign-up, no server of ours.</li>
+<li>No advertising, no analytics, no crash-reporting service, no
+third-party SDKs that collect data.</li>
+<li>No recording when a session is stopped. The persistent notification
+tells you when Advocate is listening.</li>
+</ul>
+<h2 id="third-parties">Third parties</h2>
+<p>The only third parties that receive data are the AI providers you
+configure. Each is governed by its own policy:</p>
+<ul>
+<li>xAI: https://x.ai/legal/privacy-policy</li>
+<li>OpenAI: https://openai.com/policies/privacy-policy</li>
+<li>Google (Gemini API): https://policies.google.com/privacy</li>
+<li>Any custom endpoint: whoever operates it</li>
+<li>When you use a text model: your device's speech recognition service,
+under its own policy</li>
+</ul>
+<p>If you use a model server on your own device or network, what
+Advocate sends to it stays on that network.</p>
+<h2 id="permissions">Permissions</h2>
+<ul>
+<li>Microphone: to capture audio for the session. Required.</li>
+<li>Notifications: to show the listening notification with Pause and
+Stop controls. Required for background use.</li>
+<li>Bluetooth connect: only if you choose a headset microphone, to route
+audio to it. Optional.</li>
+<li>Foreground service (microphone and media playback types): to keep
+working with the screen locked.</li>
+<li>Internet: to reach the provider you chose.</li>
+</ul>
+<h2 id="recording-other-people">Recording other people</h2>
+<p>Laws on recording conversations vary by place and may require the
+consent of the people being recorded. You are responsible for using
+Advocate lawfully where you are.</p>
+<h2 id="children">Children</h2>
+<p>Advocate is not directed at children under 13 and we do not knowingly
+collect data from them.</p>
+<h2 id="deleting-your-data">Deleting your data</h2>
+<p>Delete saved transcripts in Settings, or uninstall the app to remove
+everything it stored. Data already sent to a provider is held under that
+provider's policy and deletion process.</p>
+<h2 id="changes">Changes</h2>
+<p>If this policy changes, the new version ships with the app update and
+the effective date above is updated.</p>
+</body>
+</html>
